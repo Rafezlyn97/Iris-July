@@ -37,7 +37,12 @@ prediction = clf.predict(df)
 prediction_proba = clf.predict_proba(df)
 
 st.subheader('Class labels and their corresponding index number')
-st.write(['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']) 
+#st.write(['Iris-setosa', 'Iris-versicolor', 'Iris-virginica']) 
+option = st.selectbox(
+     'Type of Iris Flower?',
+     ('Iris-setosa', 'Iris-versicolor', 'Iris-virginica'))
+
+st.write('You selected:', option)
 
 st.subheader('Prediction')
 #st.write(iris.target_names[prediction])
